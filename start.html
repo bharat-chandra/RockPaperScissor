@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    </head>
+    <body>
+        <div class="" style="">
+            <div class="row">
+                <div class="col-xs-12" style="background:orange;height:50vh;text-align:center">
+                    <img id="11" onclick="set1()" src="rock.png" class="img-responsive img-thumbnail" style="width:250px;height:300px ">
+                    <img id="12" onclick="set2()" src="paper.png" class="img-responsive img-thumbnail" style="width:250px;height:300px ">
+                    <img id="13" onclick="set3()" src="scissor.png" class="img-responsive img-thumbnail" style="width:250px;height:300px ">
+                </div>
+                <div class="col-xs-12" style="text-align:center">
+                    <button class="3 btn btn-lg btn-default" type="button">start the game</button>
+                </div>
+                <div class="col-xs-12" style="background:silver;height:50vh;text-align:center">
+                    <img id="2" src="scissor.png" class="img-responsive img-thumbnail" style="width:250px;height:300px ">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var arr = ['rock.png','paper.png','scissor.png'];
+            var buffer1,buffer2;
+            var img1 = document.getElementById("11");
+            var img2 = document.getElementById("12");
+            var img3 = document.getElementById("13");
+            var pc = document.getElementById("2");
+            var btn = document.getElementsByClassName("3");
+            $(btn).click(function(){
+               buffer2 = arr[Math.floor(Math.random() * arr.length)]; 
+               btn.innerHTML = "hi";
+               pc.src = buffer2;
+            });
+            
+        </script>
+    </body>
+</html>
